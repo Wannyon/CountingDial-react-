@@ -1,4 +1,5 @@
 import {useState} from "react";
+import './Dial.css';
 
 const Dial = () => {
     const [digits, setDigits] = useState([0]);
@@ -34,6 +35,10 @@ const Dial = () => {
         let decrease = 1;
         let digitsLength = newDigits.length;
 
+        if (digitsLength <= 1 && newDigits[digitsLength - 1] === 0) {   // 0일때 return.
+            return;
+        }
+
         for (let i = digitsLength - 1; i >= 0; i--) {
             newDigits[i] -= decrease;
 
@@ -55,18 +60,28 @@ const Dial = () => {
         console.log(newDigits);
     };
 
+    const reset = () => {
+        setDigits([0]); // 0으로 초기화.
+    }
+
 //    console.log('digits :', digits);
 
     return (
-        <div className="dial">
-            <button className="dial-button" onClick={increment}>▲</button>
+        <>
+            <div className="dial">
+                <button className="dial-button" onClick={increment}>▲</button>
 
-            <div className="number-display">
-                <span>{digits}</span>
+                <div className="number-display">
+                    <span>{digits}</span>
+                </div>
+
+                <button className="dial-button" onClick={decrement}>▼</button>
             </div>
 
-            <button className="dial-button" onClick={decrement}>▼</button>
-        </div>
+            <div>
+                <button className="dial-button-reset" onClick={reset}>Reset</button>
+            </div>
+        </>
     );
 };
 

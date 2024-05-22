@@ -2,6 +2,7 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import Dial from "./components/Dial.jsx";
+import DialTwo from "./components/DialTwo.jsx";
 import './App.css';
 
 function App() {
@@ -30,8 +31,13 @@ function App() {
             Click on the Vite and React logos to learn more
         </p>
         <div>
-            <h1>Number Dial</h1>
+            <h1>Number Dial(ver.01, Positive Value)</h1>
             <Dial/>
+        </div>
+
+        <div>
+            <h1>Number Dial(ver.02)</h1>
+            <DialTwo/>
         </div>
     </>
   )
