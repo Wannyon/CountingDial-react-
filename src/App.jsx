@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg';
 import Dial from "./components/Dial.jsx";
 import DialTwo from "./components/DialTwo.jsx";
 import './App.css';
+import DialThree from "./components/DialThree.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,6 +39,11 @@ function App() {
         <div>
             <h1>Number Dial(ver.02)</h1>
             <DialTwo/>
+        </div>
+
+        <div>
+            <h1>Number Dial(ver.03, InputValue)</h1>
+            <DialThree/>
         </div>
     </>
   )

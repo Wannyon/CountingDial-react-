@@ -6,6 +6,17 @@
     font-size: large;
 }
 
+.input-field {
+    font-size: large;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 80px;
+}
+
+input::-webkit-inner-spin-button {  /* input 업다운 버튼 없애기 */
+    -webkit-appearance: none;
+}
+
 .number-display {
     display: flex;
     align-items: center;
